@@ -20,7 +20,7 @@ supported.patchlevels=
 '; } # end properties
 
 # shell variables
-block=/dev/block/platform/soc.0/7824900.sdhci/by-name/boot;
+block=/dev/block/bootdevice/by-name/boot;
 is_slot_device=0;
 ramdisk_compression=auto;
 
@@ -39,3 +39,5 @@ set_perm_recursive 0 0 750 750 $ramdisk/init* $ramdisk/sbin;
 ## AnyKernel install
 dump_boot;
 
+write_boot;
+## end install
